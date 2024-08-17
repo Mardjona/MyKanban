@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:MyKanban.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MyKanban.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="MyKanban">
+    <Window.Background>
+        <ImageBrush Source="/Images/Изображение 1.jpeg"
+                    Opacity="0.3"
+                    Stretch="UniformToFill">
+        </ImageBrush>
+    </Window.Background>
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+    <StackPanel >
+        <TextBlock  HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="IndianRed" FontSize="70" FontFamily=" Times New Roman " Margin="110 10" >
+             YourTrack 
+        </TextBlock>
+        <TextBlock   HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Azure" FontSize="30" Margin="0 50" FontFamily=" Times New Roman " >
+            Добро пожаловать в трекер задач 🕸
+        </TextBlock>
+        <TextBox HorizontalAlignment="Center" Height="10" Width="300" Watermark="Введите ваше имя" TextAlignment="Center"></TextBox>
+        <Button Content="Войти" HorizontalAlignment="Center" Margin="0 15 0 0 "></Button>
+    </StackPanel>
+    
+</Window>
